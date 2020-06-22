@@ -1,0 +1,39 @@
+﻿<link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+    .actionlink {
+        font-size: 80%;
+        color: seagreen;
+    }
+</style>
+
+<meta name="viewport" content="width=width-device" />
+
+@model IEnumerable<CRMApplication.Models.Client>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container"> 
+    <div class="row">
+        <br />
+        <br /><br /><br /><br /><br /><br />
+
+   <h2>     @Html.ActionLink("Create New Client", "Insert", new { @class = "actionlink" })</></h2>
+
+<h2>   @Html.ActionLink("View all Data of Clients", "viewdata", new { @class = "actionlink" })</h2>
+
+    </div>
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+        $('#table_id').DataTable();
+    });
+
+</script>
+
